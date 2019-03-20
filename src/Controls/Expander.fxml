@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="VBox" styleClass="root" stylesheets="/Controls/ExpanderStyle.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+      <HBox>
+         <ToggleButton fx:id="header" onAction="#expand" selected="true" styleClass="expander" stylesheets="/Controls/ExpanderStyle.css" text="Text" underline="true">
+            <graphic>
+               <Label styleClass="arrow" stylesheets="/Controls/ExpanderStyle.css" text="&gt;" />
+            </graphic>
+         </ToggleButton>
+      </HBox>
+      <ScrollPane fx:id="container" fitToHeight="true" fitToWidth="true" styleClass="scroll-pane" stylesheets="/Controls/ExpanderStyle.css" />
+</fx:root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainStageController">
+    <BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: LightGray;">
+        <top>
+            <GridPane BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="40.0" />
+                </rowConstraints>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <ToggleButton fx:id="groupBy" onAction="#group" styleClass="sort-btn" stylesheets="@/Styles/mainStageStyle.css" text="%groupBy" />
+                    <MenuButton fx:id="group" onMouseClicked="#groupClicked" prefWidth="150.0" text="%none" />
+                </HBox>
+                <HBox alignment="CENTER" GridPane.columnIndex="1">
+                    <ToggleButton fx:id="searchTbtn" onMouseClicked="#search" styleClass="buttons" stylesheets="@/Styles/mainStageStyle.css" text="" />
+                    <TextField fx:id="searchTextField" managed="false" />
+                    <Button onAction="#searchUpdates" styleClass="buttons" stylesheets="@/Styles/mainStageStyle.css" text="" />
+                    <Button onAction="#addItem" styleClass="buttons" stylesheets="@/Styles/mainStageStyle.css" text="" />
+                    <Button onAction="#settings" styleClass="buttons" stylesheets="@/Styles/mainStageStyle.css" text="" />
+                    <Button onAction="#logout" styleClass="buttons" stylesheets="@/Styles/mainStageStyle.css" text="" />
+                </HBox>
+                <BorderPane.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </BorderPane.margin>
+            </GridPane>
+        </top>
+        <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="scroll-pane" stylesheets="@/Styles/mainStageStyle.css" BorderPane.alignment="CENTER">
+                <FlowPane fx:id="contentPane" style="-fx-border-color: Black;" />
+            </ScrollPane>
+        </center>
+        <effect>
+          <InnerShadow />
+        </effect>
+    </BorderPane>
+    <AnchorPane fx:id="oL" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(128, 128, 128, 0.6);" visible="false">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="174.0" text="%updating" AnchorPane.bottomAnchor="173.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="213.0" AnchorPane.topAnchor="174.0">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+</StackPane>

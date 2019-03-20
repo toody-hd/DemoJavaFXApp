@@ -1,0 +1,30 @@
+.root-pane{
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(to bottom, rgba(100, 200, 200, 0.5), rgba(255, 255, 255, 0.3));
+    -fx-padding: 10;
+    -fx-border-radius: 7;
+    -fx-border-width: 5;
+    -fx-border-color: radial-gradient(center 50% 50% , radius 100% ,
+    transparent, rgba(0, 0, 0, 0.1), rgba(255, 0, 0, 0.6));
+}
+
+.close-btn{
+    -fx-background-radius: 5;
+    -fx-background-color: transparent;
+}
+
+.close-btn:hover{
+    -fx-background-radius: 5;
+    -fx-background-color: rgba(255, 0, 0, 0.6);
+    -fx-text-fill: white;
+}
+
+.btn {
+    -fx-background-color: Goldenrod;
+    -fx-background-radius: 10;
+    -fx-text-fill: White;
+}
+
+.btn:hover {
+    -fx-background-color: Blue;
+}

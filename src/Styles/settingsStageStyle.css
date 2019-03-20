@@ -1,0 +1,40 @@
+.section-pane {
+    -fx-border-width: 0 10 0 0;
+    -fx-border-color: linear-gradient(to bottom, Gray, Transparent);
+}
+
+.back-btn {
+    -fx-text-fill: White;
+    -fx-background-color: Transparent;
+    -fx-font-size: 25;
+    -fx-font-family: FontAwesome;
+}
+
+.back-btn:hover {
+    -fx-scale-x: 1.4;
+    -fx-scale-y: 1.4;
+    -fx-scale-z: 1.4;
+}
+
+.section-btn {
+    -fx-background-color: Transparent;
+    -fx-font-size: 25;
+    -fx-padding: -2 0 -2 0;
+}
+
+.section-btn:hover {
+    -fx-scale-x: 1.4;
+    -fx-scale-y: 1.4;
+    -fx-scale-z: 1.4;
+}
+
+.save_reset-btn {
+    -fx-background-color: Goldenrod;
+    -fx-background-radius: 10;
+    -fx-padding: 10 40 10 40;
+    -fx-text-fill: White;
+}
+
+.save_reset-btn:hover {
+    -fx-background-color: Blue;
+}

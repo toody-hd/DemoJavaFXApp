@@ -1,0 +1,37 @@
+.root {
+    -fx-background-color: Transparent;
+    -fx-font-size: 20;
+    -fx-text-fill: linear-gradient(to right, red, gold, blue);;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.expander {
+    -fx-background-color: Transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+.expander:hover .arrow {
+    -fx-text-fill: White;
+}
+.expander:selected:hover .arrow{
+    -fx-text-fill: White;
+}
+
+.expander:selected .arrow {
+    -fx-text-fill: Blue;
+    -fx-rotate: 90;
+}
+
+.expander:armed .arrow {
+    -fx-text-fill: Black;
+}
+
+.expander:selected:armed .arrow {
+    -fx-text-fill: Black;
+}

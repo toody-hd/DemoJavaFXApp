@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="root-pane" stylesheets="@/NewItemWindow/NewItemWindowStyle.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewItemWindow.NewItemWindowController">
+    <top>
+        <GridPane fx:id="topBar" alignment="TOP_CENTER" onMouseDragged="#TitleDragged" onMousePressed="#TitlePressed">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <padding>
+                <Insets bottom="10.0" />
+            </padding>
+            <ImageView fx:id="ico" fitHeight="25.0" preserveRatio="true" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                </GridPane.margin>
+                <Image url="@/Resources/img.png" />
+            </ImageView>
+            <Label fx:id="ttl" alignment="CENTER" contentDisplay="CENTER" text="%title" textFill="BLUE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#Close" prefHeight="35.0" prefWidth="50.0" styleClass="close-btn" stylesheets="@/CustomMessageBox/CustomMessageBoxStyle.css" text="X" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Button>
+        </GridPane>
+    </top>
+   <center>
+       <GridPane styleClass="content" stylesheets="@/NewItemWindow/NewItemWindowStyle.css" BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints hgrow="ALWAYS" />
+               <ColumnConstraints hgrow="ALWAYS" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints />
+           </rowConstraints>
+           <VBox spacing="15.0">
+               <Label text="%name">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               </Label>
+               <Label layoutX="10.0" layoutY="10.0" text="%path">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               </Label>
+               <Label layoutX="10.0" layoutY="31.0" text="%version">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               </Label>
+               <Label layoutX="10.0" layoutY="73.0" text="%link">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               </Label>
+               <Label layoutX="10.0" layoutY="94.0" text="%tags">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               </Label>
+               <Label layoutX="10.0" layoutY="115.0" text="%image">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               </Label>
+            <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+           </VBox>
+           <VBox layoutX="10.0" layoutY="10.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1">
+               <padding>
+                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <TextField fx:id="name" />
+               <TextField fx:id="path" layoutX="10.0" layoutY="10.0" />
+               <TextField fx:id="version" layoutX="10.0" layoutY="41.0" />
+               <TextField fx:id="link" layoutX="30.0" layoutY="92.0" />
+               <MenuButton fx:id="tags" prefWidth="180.0" styleClass="combo-box" stylesheets="@/NewItemWindow/NewItemWindowStyle.css" text="%none" />
+               <Button fx:id="img" onAction="#img" prefHeight="90.0" prefWidth="180.0" styleClass="img" stylesheets="@/NewItemWindow/NewItemWindowStyle.css" />
+           </VBox>
+           <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" GridPane.columnIndex="2">
+               <padding>
+                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <Button onAction="#browse" styleClass="buttons" stylesheets="@/NewItemWindow/NewItemWindowStyle.css" text="%browse">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               </Button>
+               <CheckBox text="%done" visible="false">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               </CheckBox>
+               <Button onAction="#updateLink" styleClass="buttons" stylesheets="@/NewItemWindow/NewItemWindowStyle.css" text="%updateLink">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               </Button>
+               <Button fx:id="addSave" defaultButton="true" onAction="#add_save" prefHeight="55.0" prefWidth="130.0" styleClass="add_save-btn" stylesheets="@/NewItemWindow/NewItemWindowStyle.css" text="%add">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin></Button>
+           </VBox>
+         <effect>
+            <InnerShadow />
+         </effect>
+       </GridPane>
+   </center>
+</BorderPane>

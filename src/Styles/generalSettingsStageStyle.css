@@ -1,0 +1,47 @@
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.expander {
+    -fx-background-color: Transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+.expander:hover .arrow {
+    -fx-text-fill: White;
+}
+
+.expander:selected:hover .arrow{
+    -fx-text-fill: White;
+}
+
+.expander:selected .arrow {
+    -fx-text-fill: Blue;
+    -fx-rotate: 90;
+}
+
+.expander:armed .arrow {
+    -fx-text-fill: Black;
+}
+
+.expander:selected:armed .arrow {
+    -fx-text-fill: Black;
+}
+
+.expander-btn {
+    -fx-font-family: FontAwesome;
+    -fx-background-color: Transparent;
+    -fx-font-weight: Bold;
+    -fx-font-size: 24;
+    -fx-padding: 5 5 5 5;
+}
+
+.expander-btn:hover {
+    -fx-scale-x: 1.4;
+    -fx-scale-y: 1.4;
+    -fx-scale-z: 1.4;
+}

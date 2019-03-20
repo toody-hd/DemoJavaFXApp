@@ -1,0 +1,33 @@
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.buttons {
+    -fx-text-fill: White;
+    -fx-background-color: Transparent;
+    -fx-font-size: 25;
+    -fx-font-family: FontAwesome;
+}
+
+.buttons:hover {
+    -fx-scale-x: 1.4;
+    -fx-scale-y: 1.4;
+    -fx-scale-z: 1.4;
+}
+
+.sort-btn {
+    -fx-background-color: Transparent;
+}
+
+.item {
+
+}
+
+.item:hover {
+    -fx-border-color: #5fadba;
+    -fx-border-width: 2;
+}

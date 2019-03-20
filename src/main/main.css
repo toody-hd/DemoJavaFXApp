@@ -1,0 +1,34 @@
+.root-normal{
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(to bottom, rgba(100, 200, 200, 0.5), rgba(255, 255, 255, 0.3));
+    -fx-padding: 10;
+    -fx-border-radius: 7;
+    -fx-border-width: 5;
+    -fx-border-color: radial-gradient(center 50% 50% , radius 100% ,
+                                      transparent, rgba(0, 0, 0, 0.1), rgba(255, 0, 0, 0.6));
+}
+
+.root-expanded{
+    -fx-background-color: rgba(100, 200, 200, 0.9);
+}
+
+.close-btn{
+    -fx-background-radius: 5;
+    -fx-background-color: transparent;
+}
+
+.close-btn:hover{
+    -fx-background-radius: 5;
+    -fx-background-color: rgba(255, 0, 0, 0.6);
+    -fx-text-fill: white;
+}
+
+.min_max-btn{
+    -fx-background-radius: 5;
+    -fx-background-color: transparent;
+}
+
+.min_max-btn:hover{
+    -fx-background-radius: 5;
+    -fx-background-color: rgba(10, 200, 200, 0.6);
+}

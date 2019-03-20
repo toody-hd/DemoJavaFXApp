@@ -1,0 +1,25 @@
+.root {
+    -fx-background-color: SlateGray;
+}
+
+.wrapper {
+    -fx-background-color: White;
+    -fx-background-radius: 10;
+}
+
+.login-btn {
+    -fx-background-color: Goldenrod;
+    -fx-background-radius: 10;
+    -fx-text-fill: White;
+}
+.login-btn:hover {
+    -fx-background-color: Blue;
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background;
+    -fx-background-insets: 0, 0 0 3 0 ;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background;
+}

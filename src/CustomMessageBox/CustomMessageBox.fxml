@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="500.0" styleClass="root-pane" stylesheets="@/CustomMessageBox/CustomMessageBoxStyle.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomMessageBox.CustomMessageBoxController">
+    <top>
+        <GridPane fx:id="topBar" alignment="TOP_CENTER" onMouseDragged="#TitleDragged" onMousePressed="#TitlePressed">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <padding>
+                <Insets bottom="10.0" />
+            </padding>
+            <ImageView fx:id="ico" fitHeight="25.0" preserveRatio="true" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                </GridPane.margin>
+                <Image url="@/Resources/img.png" />
+            </ImageView>
+            <Label fx:id="ttl" alignment="CENTER" contentDisplay="CENTER" text="%title" textFill="BLUE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#Close" prefHeight="35.0" prefWidth="50.0" styleClass="close-btn" stylesheets="@/CustomMessageBox/CustomMessageBoxStyle.css" text="X" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Button>
+        </GridPane>
+    </top>
+   <center>
+       <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: LightGray;" BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets />
+           </BorderPane.margin>
+           <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+           </padding>
+           <HBox fx:id="messageBox" alignment="CENTER" spacing="10.0">
+               <Label fx:id="img" />
+               <Label fx:id="msg" text="Message">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REPEAT">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="ORANGE" offset="0.5" />
+                        <Stop color="BLUE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+           </HBox>
+         <HBox fx:id="objBox" />
+           <HBox alignment="CENTER" spacing="10.0">
+               <Button fx:id="okButton" onMouseClicked="#buttonClick" prefHeight="40.0" prefWidth="100.0" styleClass="btn" stylesheets="@/CustomMessageBox/CustomMessageBoxStyle.css" text="%ok" />
+               <Button fx:id="yesButton" onMouseClicked="#buttonClick" prefHeight="40.0" prefWidth="100.0" styleClass="btn" stylesheets="@/CustomMessageBox/CustomMessageBoxStyle.css" text="%yes" />
+               <Button fx:id="noButton" onMouseClicked="#buttonClick" prefHeight="40.0" prefWidth="100.0" styleClass="btn" stylesheets="@/CustomMessageBox/CustomMessageBoxStyle.css" text="%no" />
+               <Button fx:id="cancelButton" onMouseClicked="#buttonClick" prefHeight="40.0" prefWidth="100.0" styleClass="btn" stylesheets="@/CustomMessageBox/CustomMessageBoxStyle.css" text="%cancel" />
+           </HBox>
+         <effect>
+            <DropShadow />
+         </effect>
+       </VBox>
+   </center>
+</BorderPane>
